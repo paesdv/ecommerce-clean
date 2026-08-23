@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: ecommerce
+
+  datasource:
+    url: jdbc:postgresql://localhost:${DB_PORT:5432}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+logging:
+  level:
+    com.seuprojeto.ecommerce: DEBUG

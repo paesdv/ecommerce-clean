@@ -2,7 +2,9 @@ package com.ecommerce.clean.produto.infrastructure.persistance.mapper;
 
 import com.ecommerce.clean.produto.domain.Produto;
 import com.ecommerce.clean.produto.infrastructure.persistance.entity.ProdutoJpaEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProdutoPersistanceMapper {
 
     public ProdutoJpaEntity toEntity(Produto produto){

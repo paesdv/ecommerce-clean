@@ -1,9 +1,6 @@
 package com.ecommerce.clean.produto.infrastructure.persistance.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -15,6 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 @Table(name = "produtos")
+@Entity
 public class ProdutoJpaEntity {
 
     @Id

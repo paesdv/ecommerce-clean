@@ -1,9 +1,9 @@
 package com.ecommerce.clean.produto.application.usecase;
 
+import java.math.BigDecimal;
+
 import com.ecommerce.clean.produto.application.port.out.ProdutoRepositoryPort;
 import com.ecommerce.clean.produto.domain.Produto;
-
-import java.math.BigDecimal;
 
 public class CriarProdutoUseCase {
 

@@ -1,10 +1,10 @@
 package com.ecommerce.clean.produto.application.usecase;
 
+import java.util.UUID;
+
 import com.ecommerce.clean.produto.application.port.out.ProdutoRepositoryPort;
 import com.ecommerce.clean.produto.domain.Produto;
 import com.ecommerce.clean.produto.domain.ProdutoInvalidoException;
-
-import java.util.UUID;
 
 public class BuscarProdutoUseCase {
 
@@ -18,5 +18,5 @@ public class BuscarProdutoUseCase {
         return repository.buscarPorId(id)
                 .orElseThrow(() -> new ProdutoInvalidoException("Produto nao encontrado"));
     }
-
+    
 }

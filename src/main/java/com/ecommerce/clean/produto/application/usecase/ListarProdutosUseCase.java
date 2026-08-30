@@ -5,6 +5,9 @@ import com.ecommerce.clean.produto.domain.Produto;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class ListarProdutosUseCase {
 
     private final ProdutoRepositoryPort repository;

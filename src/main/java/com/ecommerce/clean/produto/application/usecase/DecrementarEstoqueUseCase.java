@@ -6,6 +6,9 @@ import com.ecommerce.clean.produto.domain.ProdutoNaoEncontradoException;
 
 import java.util.UUID;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class DecrementarEstoqueUseCase {
 
     private final ProdutoRepositoryPort reposository;

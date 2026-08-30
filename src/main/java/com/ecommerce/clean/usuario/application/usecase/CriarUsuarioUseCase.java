@@ -1,8 +1,11 @@
 package com.ecommerce.clean.usuario.application.usecase;
 
+import org.springframework.stereotype.Service;
+
 import com.ecommerce.clean.usuario.application.port.out.UsuarioRepositoryPort;
 import com.ecommerce.clean.usuario.domain.Usuario;
 
+@Service
 public class CriarUsuarioUseCase {
 
     private final UsuarioRepositoryPort repository;

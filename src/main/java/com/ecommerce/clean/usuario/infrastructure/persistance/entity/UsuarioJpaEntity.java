@@ -1,10 +1,13 @@
-package com.ecommerce.clean.produto.infrastructure.persistance.entity;
+package com.ecommerce.clean.usuario.infrastructure.persistance.entity;
 
-import java.math.BigDecimal;
 import java.util.UUID;
+
+import com.ecommerce.clean.usuario.domain.Role;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,20 +23,24 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "produtos")
+@Table(name = "usuario")
 @Entity
-public class ProdutoJpaEntity {
+public class UsuarioJpaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    
+
     @Column(name = "nome", nullable = false)
     private String nome;
-    
-    @Column(name = "preco", nullable = false)
-    private BigDecimal preco;
 
-    private int quantidadeEstoque;
+    @Column(name = "email", nullable = false)
+    private String email;
 
+    @Column(name = "senha", nullable = false)
+    private String senha;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role", nullable = false)
+    private Role role;
 }
